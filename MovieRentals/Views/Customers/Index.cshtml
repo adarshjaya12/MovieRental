@@ -1,0 +1,22 @@
+﻿@model MovieRentals.Models.CustomersList
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Customers</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model.CustomerLists)
+        {
+            <tr><td>@Html.ActionLink(p.CustomerName, "Details", "Customer", new { id = p.CustomerId }, null)</td></tr>
+            
+
+        }
+    </tbody>
+</table>
