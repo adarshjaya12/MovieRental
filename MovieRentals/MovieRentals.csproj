@@ -166,11 +166,32 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611052329070_Initial.cs" />
+    <Compile Include="Migrations\201611052329070_Initial.Designer.cs">
+      <DependentUpon>201611052329070_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611052333368_PopulateMembershipType.cs" />
+    <Compile Include="Migrations\201611052333368_PopulateMembershipType.Designer.cs">
+      <DependentUpon>201611052333368_PopulateMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611060000201_ApplyAnotationToCustomerName.cs" />
+    <Compile Include="Migrations\201611060000201_ApplyAnotationToCustomerName.Designer.cs">
+      <DependentUpon>201611060000201_ApplyAnotationToCustomerName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611060046116_TypoInCustomerTable.cs" />
+    <Compile Include="Migrations\201611060046116_TypoInCustomerTable.Designer.cs">
+      <DependentUpon>201611060046116_TypoInCustomerTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611060052003_UpdatedModelTypos.cs" />
+    <Compile Include="Migrations\201611060052003_UpdatedModelTypos.Designer.cs">
+      <DependentUpon>201611060052003_UpdatedModelTypos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
-    <Compile Include="Models\CustomersList.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -246,6 +267,23 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201611052329070_Initial.resx">
+      <DependentUpon>201611052329070_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611052333368_PopulateMembershipType.resx">
+      <DependentUpon>201611052333368_PopulateMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611060000201_ApplyAnotationToCustomerName.resx">
+      <DependentUpon>201611060000201_ApplyAnotationToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611060046116_TypoInCustomerTable.resx">
+      <DependentUpon>201611060046116_TypoInCustomerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611060052003_UpdatedModelTypos.resx">
+      <DependentUpon>201611060052003_UpdatedModelTypos.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

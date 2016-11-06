@@ -20,10 +20,16 @@ namespace MovieRentals.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Customer> Customer { get; set; }
+        public DbSet<MembershipType> MemebershipType { get; set; }
+
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("ApplicationDbContext", throwIfV1Schema: false)
         {
+
         }
+
+
 
         public static ApplicationDbContext Create()
         {

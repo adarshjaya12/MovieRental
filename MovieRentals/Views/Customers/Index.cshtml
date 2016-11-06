@@ -1,21 +1,26 @@
-﻿@model MovieRentals.Models.CustomersList
+﻿@model IEnumerable<MovieRentals.Models.Customer>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Index</h2>
-<table class="table">
+<table class="table table-bordered table-hover">
     <thead>
         <tr>
-            <th>Customers</th>
+            <th><h3>Customers</h3></th>
+            <th><h3>Discount Rate</h3></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var p in Model.CustomerLists)
+        @foreach (var p in Model)
         {
-            <tr><td>@Html.ActionLink(p.CustomerName, "Details", "Customer", new { id = p.CustomerId }, null)</td></tr>
-            
+            <tr>
+                <td><h3>@Html.ActionLink(p.CustomerName, "Details", "Customer", new { id = p.CustomerId }, null)</h3></td>
+                <td><h3>@p.MembershipTypeId</h3></td>
+            </tr>
+
+
 
         }
     </tbody>
