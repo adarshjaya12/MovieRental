@@ -166,25 +166,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611052329070_Initial.cs" />
-    <Compile Include="Migrations\201611052329070_Initial.Designer.cs">
-      <DependentUpon>201611052329070_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201611062042515_InitialMigration.cs" />
+    <Compile Include="Migrations\201611062042515_InitialMigration.Designer.cs">
+      <DependentUpon>201611062042515_InitialMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611052333368_PopulateMembershipType.cs" />
-    <Compile Include="Migrations\201611052333368_PopulateMembershipType.Designer.cs">
-      <DependentUpon>201611052333368_PopulateMembershipType.cs</DependentUpon>
+    <Compile Include="Migrations\201611062046416_AddedMoviesGenres.cs" />
+    <Compile Include="Migrations\201611062046416_AddedMoviesGenres.Designer.cs">
+      <DependentUpon>201611062046416_AddedMoviesGenres.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611060000201_ApplyAnotationToCustomerName.cs" />
-    <Compile Include="Migrations\201611060000201_ApplyAnotationToCustomerName.Designer.cs">
-      <DependentUpon>201611060000201_ApplyAnotationToCustomerName.cs</DependentUpon>
+    <Compile Include="Migrations\201611062049440_AddMembershiptype.cs" />
+    <Compile Include="Migrations\201611062049440_AddMembershiptype.Designer.cs">
+      <DependentUpon>201611062049440_AddMembershiptype.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611060046116_TypoInCustomerTable.cs" />
-    <Compile Include="Migrations\201611060046116_TypoInCustomerTable.Designer.cs">
-      <DependentUpon>201611060046116_TypoInCustomerTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611060052003_UpdatedModelTypos.cs" />
-    <Compile Include="Migrations\201611060052003_UpdatedModelTypos.Designer.cs">
-      <DependentUpon>201611060052003_UpdatedModelTypos.cs</DependentUpon>
+    <Compile Include="Migrations\201611062059403_AddGenreToDatabase.cs" />
+    <Compile Include="Migrations\201611062059403_AddGenreToDatabase.Designer.cs">
+      <DependentUpon>201611062059403_AddGenreToDatabase.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -192,9 +188,10 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
-    <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\Movies.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModel\CustomerView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-lumen.css" />
@@ -257,6 +254,9 @@
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Shared\_Navbar.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
+    <Content Include="Views\Customers\New.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -269,20 +269,17 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611052329070_Initial.resx">
-      <DependentUpon>201611052329070_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611062042515_InitialMigration.resx">
+      <DependentUpon>201611062042515_InitialMigration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611052333368_PopulateMembershipType.resx">
-      <DependentUpon>201611052333368_PopulateMembershipType.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611062046416_AddedMoviesGenres.resx">
+      <DependentUpon>201611062046416_AddedMoviesGenres.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611060000201_ApplyAnotationToCustomerName.resx">
-      <DependentUpon>201611060000201_ApplyAnotationToCustomerName.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611062049440_AddMembershiptype.resx">
+      <DependentUpon>201611062049440_AddMembershiptype.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611060046116_TypoInCustomerTable.resx">
-      <DependentUpon>201611060046116_TypoInCustomerTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611060052003_UpdatedModelTypos.resx">
-      <DependentUpon>201611060052003_UpdatedModelTypos.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611062059403_AddGenreToDatabase.resx">
+      <DependentUpon>201611062059403_AddGenreToDatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

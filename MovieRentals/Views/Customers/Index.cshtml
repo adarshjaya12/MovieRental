@@ -5,6 +5,7 @@
 }
 
 <h2>Index</h2>
+@Html.ActionLink("Add Customer", "New", "Customers", new { @class="btn btn-primary" })
 <table class="table table-bordered table-hover">
     <thead>
         <tr>
@@ -16,8 +17,8 @@
         @foreach (var p in Model)
         {
             <tr>
-                <td><h3>@Html.ActionLink(p.CustomerName, "Details", "Customer", new { id = p.CustomerId }, null)</h3></td>
-                <td><h3>@p.MembershipTypeId</h3></td>
+                <td><h4>@Html.ActionLink(p.CustomerName, "Details", "Customer", new { id = p.CustomerId }, null)</h4></td>
+                <td><h4>@p.MembershipType.MemberName</h4></td>
             </tr>
 
 

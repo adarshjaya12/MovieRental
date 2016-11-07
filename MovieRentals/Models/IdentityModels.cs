@@ -22,6 +22,9 @@ namespace MovieRentals.Models
     {
         public DbSet<Customer> Customer { get; set; }
         public DbSet<MembershipType> MemebershipType { get; set; }
+        public DbSet<Movies> Movies{ get; set; }
+        public DbSet<Genres> Genres { get; set; }
+
 
         public ApplicationDbContext()
             : base("ApplicationDbContext", throwIfV1Schema: false)

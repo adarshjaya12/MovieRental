@@ -5,5 +5,10 @@
 
 
     <h3>@Model.CustomerName</h3>
-    <h4>@Model.CustomerGender</h4>
+    <h4>Membership Type : @Model.MembershipType.SignUpFee</h4>
+    @if (Model.BirthDate != null)
+    {
+        <h4>Birthdate: @Model.BirthDate</h4>
+    }
+    
 

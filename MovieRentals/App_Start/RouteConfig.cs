@@ -18,6 +18,12 @@ namespace MovieRentals
                 "Customer/Details/{id}",
                 new {  controller="Customers", action="Details"}
                 );
+            routes.MapRoute(
+                "DetailMovies",
+                "Movies/Details/{id}",
+                new { controller="Movies" , action = "Details"},
+                new { id =@"\d"}
+                );
 
             routes.MapRoute(
                 name: "Default",
