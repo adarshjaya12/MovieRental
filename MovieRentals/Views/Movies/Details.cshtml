@@ -1,0 +1,12 @@
+﻿@model MovieRentals.Models.Movies
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>@Model.MovieName</h3>
+<h4>Release Date : @Model.ReleaseDate</h4>
+<h4>Genre : @Model.Genres.GenreType</h4>
+
+
+

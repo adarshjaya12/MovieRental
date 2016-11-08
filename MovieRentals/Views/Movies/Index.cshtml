@@ -1,0 +1,26 @@
+﻿@model IEnumerable<MovieRentals.Models.Movies>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Movie List</h2>
+@Html.ActionLink("Add Movie", "MovieForm", "Movies", new { @class="btn btn-primary"})
+<table class="table table-bordered">
+    <thead>
+        <th>Movies</th>
+        <th> Genre</th>
+    </th>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td><h4>@Html.ActionLink(p.MovieName,"Details","Movies",new {id = p.Id} ,null)</h4></td>
+                <td><h4>@p.Genres.GenreType</h4></td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+

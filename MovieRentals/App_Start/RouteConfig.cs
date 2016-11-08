@@ -15,7 +15,7 @@ namespace MovieRentals
 
             routes.MapRoute(
                 "DetailCustomer",
-                "Customer/Details/{id}",
+                "Customer/Edit/{id}",
                 new {  controller="Customers", action="Details"}
                 );
             routes.MapRoute(
@@ -28,7 +28,7 @@ namespace MovieRentals
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Customers", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Movies", action = "Index", id = UrlParameter.Optional }
             );
 
             
