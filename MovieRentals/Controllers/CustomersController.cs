@@ -84,7 +84,7 @@ namespace MovieRentals.Controllers
                 checkExist.CustomerGender = viewCustomer.Customer.CustomerGender;
                 checkExist.IsSubscribedToNewsLetter = viewCustomer.Customer.IsSubscribedToNewsLetter;
                 checkExist.MembershipTypeId = viewCustomer.Customer.MembershipTypeId;
-                checkExist.Age = viewCustomer.Customer.Age;
+                //checkExist.Age = viewCustomer.Customer.Age;
                 _context.Entry(checkExist).State = EntityState.Modified;
                 _context.SaveChanges();
             }

@@ -14,15 +14,24 @@ namespace MovieRentals.Models
         
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CustomerId { get; set; }
+
         [Required]
         [Display(Name="Customer Name")]
         public string CustomerName { get; set; }
+
+
         [Required]
         [Display(Name = "Gender")]
         public string CustomerGender { set; get; }
-        public byte Age { set; get; }
+
+        //[Required]
+        //public byte Age { set; get; }
+
+
         [Display(Name = "Date Of Birth")]
         public DateTime? BirthDate { set; get; }
+
+
         public bool IsSubscribedToNewsLetter { set; get; }
 
         public byte MembershipTypeId { get; set; }

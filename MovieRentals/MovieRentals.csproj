@@ -175,6 +175,14 @@
     <Compile Include="Migrations\201611081836351_UpdateMovieType.Designer.cs">
       <DependentUpon>201611081836351_UpdateMovieType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611082233236_AddedRequiredValidation.cs" />
+    <Compile Include="Migrations\201611082233236_AddedRequiredValidation.Designer.cs">
+      <DependentUpon>201611082233236_AddedRequiredValidation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611082313210_RemovedAgeFromCustomer.cs" />
+    <Compile Include="Migrations\201611082313210_RemovedAgeFromCustomer.Designer.cs">
+      <DependentUpon>201611082313210_RemovedAgeFromCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -269,6 +277,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611081836351_UpdateMovieType.resx">
       <DependentUpon>201611081836351_UpdateMovieType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611082233236_AddedRequiredValidation.resx">
+      <DependentUpon>201611082233236_AddedRequiredValidation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611082313210_RemovedAgeFromCustomer.resx">
+      <DependentUpon>201611082313210_RemovedAgeFromCustomer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

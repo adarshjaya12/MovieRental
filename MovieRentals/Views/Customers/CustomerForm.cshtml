@@ -11,19 +11,23 @@
         <div class="form-group">
             <h4>@Html.LabelFor(l => l.Customer.CustomerName)</h4>
             @Html.TextBoxFor(m => m.Customer.CustomerName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(t => t.Customer.CustomerName)
         </div>
         <div class="form-group">
             <h4>@Html.LabelFor(l => l.Customer.BirthDate)</h4>
             @Html.TextBoxFor(m => m.Customer.BirthDate,"{0: d MMM yyyy}"  , new { @class = "form-control" })
+           
         </div>
         <div class="form-group">
             <h4>@Html.LabelFor(l => l.Customer.CustomerGender)</h4>
             @Html.DropDownListFor(l => l.Customer.CustomerGender, new SelectList(Model.CustomerGender, "GenderType", "GenderType"), "Select Gender", new { @class = "form-control" })
+            @Html.ValidationMessageFor(t => t.Customer.CustomerGender)
         </div>
-        <div class="form-group">
+        @*<div class="form-group">
             <h4>@Html.LabelFor(l => l.Customer.Age)</h4>
             @Html.TextBoxFor(m => m.Customer.Age, new { @class = "form-control" })
-        </div>
+            @Html.ValidationMessageFor(t => t.Customer.Age)
+        </div>*@
         <div class="form-group"> 
             <h4>@Html.LabelFor(l => l.Customer.MembershipTypeId)</h4>
             @Html.DropDownListFor(d => d.Customer.MembershipTypeId, new SelectList(Model.MembershipTypes, "MembershipTypeId", "MemberName"), "Select Memebership", new { @class = "form-control" })
